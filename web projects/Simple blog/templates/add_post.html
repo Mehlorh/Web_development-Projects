@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <div class="container">
+        <form action="{{ url_for('create_post') }}" method="POST">
+            <h2>Create a New Post</h2>
+            <input type="text" name="title" placeholder="Post Title" required>
+            <textarea name="content" placeholder="Write your post here..." class="textarea" required></textarea>
+            <button type="submit" class="btn">Post</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Your Blog | <a href="#">Privacy Policy</a></p>
+    </div>
+</body>
+</html>

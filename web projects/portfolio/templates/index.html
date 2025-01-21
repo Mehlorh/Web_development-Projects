@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Sboniso Mncwango</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #031424;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+        .header, .footer {
+            background-color: #031424;
+            padding: 20px 0;
+            border-bottom: 2px solid #00509E;
+        }
+        .section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            border-bottom: 2px solid #00509E;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .project-item {
+            background: #1a2530;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .footer a {
+            color: lightblue;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: white;
+        }
+        .progress {
+            background-color: #ddd;
+            border-radius: 5px;
+            height: 20px;
+            margin: 10px 0;
+        }
+        .progress-bar {
+            background-color: #00509E;
+            height: 100%;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header text-center">
+        <h1>Welcome to My Portfolio</h1>
+        <img src="/static/images/sboniso.jpg" alt="Sboniso Mncwango">
+        <p>Hi, I'm Sboniso Mncwango, a passionate software developer.</p>
+    </header>
+
+    <div class="container">
+        <section class="section" id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate web developer driven by the challenge of solving complex problems and creating innovative digital solutions. I take pride in building responsive, user-friendly websites that enhance user experience and meet modern web standards. I am constantly learning and adapting to the latest web technologies, ensuring that my skills are always up-to-date. With a strong focus on collaboration, I enjoy working within diverse teams to bring ideas to life. My approach to web development and testing is rooted in delivering high-quality, scalable, and efficient solutions, with an emphasis on automation and ensuring top-tier performance.
+            </p>
+        </section>
+
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+            <div class="row">
+                <div class="col-md-6 project-item">
+                    <h4>Project Title 1</h4>
+                    <p>Description of the project, technologies used, and a link to the demo or repo.</p>
+                </div>
+                <div class="col-md-6 project-item">
+                    <h4>Project Title 2</h4>
+                    <p>Description of the project, technologies used, and a link to the demo or repo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <h2>Skills</h2>
+            <div>
+                <p>Java</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;">80%</div>
+                </div>
+                <p>Python</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%;">70%</div>
+                </div>
+                <p>React</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 60%;">60%</div>
+                </div>
+                <!-- Add more skills similarly -->
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <h2>Experience</h2>
+            <h4>Software Developer</h4>
+            <p>WeThinkCode, Durban, KwaZulu-Natal, South Africa</p>
+            <p>September 2022 - December 2023 (1 year 4 months)</p>
+            <p>Completed a rigorous, peer-to-peer learning program at WeThinkCode_, focusing on honing problem-solving skills and fostering a collaborative learning environment. Gained practical experience through real-world projects and acquired a comprehensive understanding of full-stack software engineering. Emphasized hands-on learning and critical thinking to tackle complex coding challenges.</p>
+        </section>
+        
+        <section class="section" id="education">
+            <h2>Education</h2>
+            <h4>WeThinkCode</h4>
+            <img src="/static/images/wethinkcode.png" alt="WeThinkCode Logo" style="width: 100px; height: auto; margin-bottom: 10px;">
+            <p>Diploma of Education, Software Development</p>
+            <p>September 2022 - December 2024</p>
+            <h4>MANCOSA</h4>
+            <img src="/static/images/mancosa.png" alt="MANCOSA Logo" style="width: 100px; height: auto; margin-bottom: 10px;">
+            <p>Higher Certificate, Information Technology</p>
+            <p>2020 - 2021</p>
+        </section>
+        
+        <section class="section" id="contact">
+            <h2>Contact Me</h2>
+            <p>
+                <a href="mailto:mehlo.s.mncwango@gmail.com" style="color: lightblue;">
+                    <i class="fab fa-google"></i> mehlo.s.mncwango@gmail.com
+                </a>
+            </p>
+            <p>
+                <i class="fas fa-phone"></i> 
+                <span style="color: lightblue;">+27 78 872 2177</span>
+            </p>
+        </section>
+        
+    </div>
+
+    <footer class="footer text-center">
+        <p>&copy; 2024 Sboniso Mncwango | 
+        <a href="https://www.linkedin.com/in/sboniso-mncwango-71325b190">LinkedIn</a> | 
+        <a href="https://github.com/Mehlorh/CODSOFT">GitHub</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

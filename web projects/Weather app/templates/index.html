@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" role="main">
+        <h1>Weather App</h1>
+        <button id="getWeatherBtn" aria-label="Get Current Weather">Get Current Weather</button>
+        <div id="weatherInfo" class="weather-info" role="alert"></div>
+    </div>
+    <script>
+        document.getElementById('getWeatherBtn').onclick = function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+
+                    fetch(`/weather?lat=${lat}&lon=${lon}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const weatherDiv = document.getElementById('weatherInfo');
+                            if (data.main) {
+                                const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+                                weatherDiv.innerHTML = `
+                                    <h2>${data.name}</h2>
+                                    <img src="${iconUrl}" alt="${data.weather[0].description}" class="weather-icon">
+                                    <p class="temp">${data.main.temp} °C</p>
+                                    <p class="description">${data.weather[0].description}</p>
+                                `;
+                            } else {
+                                weatherDiv.innerHTML = `<p>${data.error}</p>`;
+                            }
+                        });
+                });
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Nike Men's Store</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Nike Logo2.png') }}" width="125px" alt="Nike Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="/favorites" class="icon"><i class="fa fa-heart"></i></a>
+                <a href="/cart" class="icon"><i class="fa fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- single product details -->
+
+    <div class="small-container">
+        <div class="row">
+            <div class="col2"></div>
+            <div class="col2"></div>
+
+        </div>
+    </div>
+
+    <!-- featured Products -->
+    <div class="small-container">
+        <div class="row row2">
+            <h2>All products</h2>
+            <select>
+                <option>Default Sorting</option>
+                <option>Sort by price</option>
+                <option>Sort by popularity</option>
+                <option>Sort by rating</option>
+                <option>Sort by sale</option>
+            </select>
+        </div>
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/Air Jordan 1 Low Make.png') }}">
+                <h4>Air Jordan 1 Low Make</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>R2 599,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/Lebron XXII.png') }}">
+                <h4>Lebron XXII Sneakers</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>R3 699,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/Heritage Bag.png') }}">
+                <h4>Nike Heritage Eugene Backpack</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>R999,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/LA Lakers T-Shirt.png') }}">
+                <h4>LA Lakers T-Shirt.png</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>R699,95</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/latest1.png') }}">
+                <h4>Nike Air Max Portal</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>R2 199,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/latest2.png') }}">
+                <h4>Nike Air Backpack 20L</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>R649,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/latest3.png') }}">
+                <h4>Nike Metcon 9 AMP</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>R2 999,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/latest4.png') }}">
+                <h4>Nike MC Trainer 3</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>R1 599,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/latest5.png') }}">
+                <h4>Nike Heritage Bag 4L</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>R429,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/latest6.png') }}">
+                <h4>Nike Max90 T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>R699,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/latest7.png') }}">
+                <h4>Nike Therma Sweatshirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>R1 399,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/latest8.png') }}">
+                <h4>Nike Tennis Hoodie</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>R1 599,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/latest9.png') }}">
+                <h4>Nike Jacquard Golf Polo</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>R1 399,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/latest10.png') }}">
+                <h4>Nike Sportswear Cross-Body Bag</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>R549,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/latest12.png') }}">
+                <h4>Jordan Flight Suit</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>R1 899,95</p>
+            </div>
+            <div class="col4">
+                <img src="{{ url_for('static', filename='images/latest11.png') }}">
+                <h4>Nike Air Max 97 SE</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>R2 299,95</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone</p>
+                    <div class="applogo">
+                        <img src="{{ url_for('static', filename='images/pstore.png') }}">
+                        <img src="{{ url_for('static', filename='images/astore.png') }}">
+                    </div>
+                </div>
+                <div class="footer-col2">
+                    <img src="{{ url_for('static', filename='images/logo3.png') }}">
+                    <p>Our purpose is to bring inspiration and innovation to every 
+                    athlete in the world.</p>
+                </div>
+                <div class="footer-col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Affiliate Program</li>
+
+                    </ul>
+                </div>
+                <div class="footer-col4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">2024 Nike, Inc. All Rights Reserved</p>
+        </div>
+    </div>
+    
+</body>
+</html>

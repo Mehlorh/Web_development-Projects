@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to Our Blog!</h1>
+        <p>Your next favorite read is just a click away.</p>
+        <a href="/posts" class="btn">Browse Posts</a>
+    </div>
+
+    <!-- Posts Section -->
+    <div class="container">
+        <div class="posts-container">
+            <!-- Loop through posts (example for one post) -->
+            {% for post in posts %}
+            <div class="post">
+                <h2 class="post-title">{{ post.title }}</h2>
+                <p class="post-content">{{ post.content[:150] }}...</p>
+                <div class="post-actions">
+                    <a href="/post/{{ post.id }}" class="btn">Read More</a>
+                    <form action="/like/{{ post.id }}" method="post" style="display:inline;">
+                        <button type="submit" class="btn">Like ({{ post.likes }})</button>
+                    </form>
+                    <form action="/comment/{{ post.id }}" method="post" style="display:inline;">
+                        <button type="submit" class="btn">Comment</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Your Blog | <a href="#">Privacy Policy</a></p>
+    </div>
+</body>
+</html>

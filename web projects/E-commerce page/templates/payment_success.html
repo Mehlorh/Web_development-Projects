@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Nike Men's Store</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            gap: 40px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .col2 {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        .col2 img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .footer{
+            background: #000;
+            color: #8a8a8a;
+            font-size: 14px;
+            padding: 60px 0 20px;
+        }
+        .footer p{
+            color: #8a8a8a;
+        }
+        .footer h3{
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .footer-col1, .footer-col2, .footer-col3, .footer-col4{
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        .footer-col1{
+            flex-basis: 30%;
+        }
+        .footer-col2{
+            flex: 1;
+            text-align: center;
+        }
+        .footer-col2 img{
+            width: 180px;
+            margin-bottom: 20px;
+        }
+        .footer-col3, .footer-col4{
+            flex-basis: 12%;
+            text-align: center;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .col2 {
+                max-width: 100%;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Nike Logo2.png') }}" width="125px" alt="Nike Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="/favorites" class="icon"><i class="fa fa-heart"></i></a>
+                <a href="/cart" class="icon"><i class="fa fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col2">
+            <h2>Payment Successful!</h2>
+            <p>Thank you for your purchase. Your order is now complete.</p>
+            <a href="/" class="btn">Go to Home &#8594;</a>
+        </div>
+        <div class="col2">
+            <img src="{{ url_for('static', filename='images/confirmed.png') }}">
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone</p>
+                    <div class="applogo">
+                        <a href="https://play.google.com"><img src="{{ url_for('static', filename='images/pstore.png') }}"></a>
+                        <a href="https://apps.apple.com"><img src="{{ url_for('static', filename='images/astore.png') }}"></a>
+                    </div>
+                </div>
+                <div class="footer-col2">
+                    <img src="{{ url_for('static', filename='images/logo3.png') }}">
+                    <p>Our purpose is to bring inspiration and innovation to every 
+                    athlete in the world.</p>
+                </div>
+                <div class="footer-col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Affiliate Program</li>
+
+                    </ul>
+                </div>
+                <div class="footer-col4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <a href="https://www.facebook.com/nike"><li>Facebook</li></a>
+                        <a href="https://www.twitter.com/nike"><li>Twitter</li></a>
+                        <a href="https://www.instagram.com/nike"><li>Instagram</li></a>                       
+                        <a href="https://www.Youtube.com/nike"><li>Youtube</li></a>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">2024 Nike, Inc. All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>

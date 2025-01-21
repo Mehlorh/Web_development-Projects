@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Men's Store | Ecommerce Website Design</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Nike Logo2.png') }}" width="125px" alt="Nike Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="/favorites" class="icon"><i class="fa fa-heart"></i></a>
+                <a href="/cart" class="icon"><i class="fa fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search">
+        <div class="row">
+            <div class="col2">
+                <h1>GET HELP</h1>
+                <div class="search-bar">
+                    <!-- <div class="get-help-text">GET HELP</div> -->
+                    <input type="text" placeholder="What can we help you with?">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-assist">
+        <h2 class="title">Quick Assist</h2>
+        <p>Answers to our most frequently asked questions are just one click away.</p>
+        <hr>
+        <div class="row">
+            <div class="col4">
+                <h1>Dispatch & Delivery</h1>
+                <a href="https://www.nike.com/za/help/a/free-shipping">
+                <p>How do I get free delivery on Nike orders?</p>
+                </a>
+                <a href="https://www.nike.com/za/help/a/shipping-delivery">
+                <p>What are Nike's delivery options?</p>
+                </a>
+                <a href="https://www.nike.com/za/help/a/international-shipping">
+                <p>Can my Nike order be dispatched internationally?</p>
+                </a>
+            </div>
+            <div class="col4">
+                <h1>Returns</h1>
+                <a href="https://www.nike.com/za/help/a/how-to-return">
+                <p>How do I return my Nike order?</p>
+                </a>
+                <a href="https://www.nike.com/za/help/a/returns-policy">
+                <p>What is Nike's returns policy?</p>
+                </a>
+                <a href="https://www.nike.com/za/help/a/refund-info">
+                <p>Where is my refund?</p>
+                </a>
+            </div>
+            <div class="col4">
+                <h1>Nike Membership</h1>
+                <a href="https://www.nike.com/za/help/a/member-benefits">
+                <p>What is Nike Membership?</p>
+                </a>
+                <a href="https://www.nike.com/za/help/a/create-nike-profile">
+                <p>How do I become a Nike Member?</p>
+                </a>
+                <a href="https://www.nike.com/za/help/a/ntc-nrc">
+                <p>How do I get the most out NRC or NTC?</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- details -->
+
+    <div class="details">
+        <h2 class="title">Contact Us</h2>
+        <hr>
+        <div class="row">
+            <div class="col4">
+                <div class="icons">
+                    <i class="fa fa-message" style="font-size:50px"></i>
+                    <h2>Chat with us</h2>
+                    <p>8:00 - 00:00<br>7 days a week</p>
+                </div>
+            </div>
+            <div class="col4">
+                <i class="fa fa-mobile" style="font-size:50px"></i>
+                <h2>Call us</h2>
+                <p>011 256 0701<br>10:00 - 18:00<br>Monday - Friday</p>
+            </div>
+            <div class="col4">
+                <i class="fa fa-map-marker" style="font-size:50px"></i>
+                <a href="https://www.nike.com/retail"><h2>Find a Store</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone</p>
+                    <div class="applogo">
+                        <a href="https://play.google.com"><img src="{{ url_for('static', filename='images/pstore.png') }}"></a>
+                        <a href="https://apps.apple.com"><img src="{{ url_for('static', filename='images/astore.png') }}"></a>
+                    </div>
+                </div>
+                <div class="footer-col2">
+                    <img src="{{ url_for('static', filename='images/logo3.png') }}">
+                    <p>Our purpose is to bring inspiration and innovation to every 
+                    athlete in the world.</p>
+                </div>
+                <div class="footer-col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Affiliate Program</li>
+
+                    </ul>
+                </div>
+                <div class="footer-col4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <a href="https://www.facebook.com/nike"><li>Facebook</li></a>
+                        <a href="https://www.twitter.com/nike"><li>Twitter</li></a>
+                        <a href="https://www.instagram.com/nike"><li>Instagram</li></a>                       
+                        <a href="https://www.Youtube.com/nike"><li>Youtube</li></a>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">2024 Nike, Inc. All Rights Reserved</p>
+        </div>
+    </div>
+
+    

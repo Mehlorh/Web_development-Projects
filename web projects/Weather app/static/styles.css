@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('/static/clouds.jpg');
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    max-width: 400px;
+    width: 90%;
+}
+
+
+
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+button {
+    padding: 10px 25px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.weather-info {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.weather-icon {
+    width: 100px;
+    margin: 10px 0;
+}
+
+.temp {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6347;
+}
+
+.description {
+    font-style: italic;
+    color: #777;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .temp {
+        font-size: 1.5rem;
+    }
+
+    .weather-info {
+        font-size: 1rem;
+    }
+}

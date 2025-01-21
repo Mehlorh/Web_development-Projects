@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Men's Store | Ecommerce Website Design</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='images/Nike Logo2.png') }}" width="125px" alt="Nike Logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/products">Products</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="icons">
+                    <a href="/favorites" class="icon"><i class="fa fa-heart"></i></a>
+                    <a href="/cart" class="icon"><i class="fa fa-shopping-bag"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col2">
+                    <h6>We<br>Serve<br><span id="changing-word"></span></h6>
+                    <p>*If you have a body, you are an athlete.
+                    </p>
+                </div>
+                <div class="col2">
+                    <img src="{{ url_for('static', filename='images/aboutpng.png') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- archive -->
+    <div class="archive">
+        <div class="container">
+            <h2 class="title">From The archive</h2>
+            <div class="row">
+                <div class="col3">
+                    <img src="{{ url_for('static', filename='images/archive1.png') }}">
+                    <a href="/bill-bowerman">
+                    <h1>Bill Bowerman: Nike's Original Innovator</h1>
+                    </a>
+                    <p>Nike co-founder Bill Bowerman's quest to create footwear to 
+                    improve athlete performance is a driving force for Nike's ever-evolving 
+                    approach to product innovation.</p>
+                </div>
+                <div class="col3">
+                    <img src="{{ url_for('static', filename='images/archive2.png') }}">
+                    <a href="/steve-prefontaine">
+                    <h1>How Steve Prefontaine Set the Pace for Nike</h1>
+                    </a>
+                    <p>
+                        How Steve Prefontaine Set the Pace for Nike
+                        Prefontaine's competitive fire, gutsy race tactics and inherent 
+                        charisma charmed crowds and inspired up-and-coming runners to stick 
+                        with the sport and give it their all.  
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Nike running -->
+
+    <div class="archive">
+        <div class="small-container">
+            <h2 class="title">New From Nike Running</h2>
+            <div class="row">
+                <div class="col5">
+                    <img src="{{ url_for('static', filename='images/new1.png') }}">
+                    <a href="/bill-bowerman">
+                    <h1>Vomero 18 Brings Maximum Cushioning to Nike's New Road Running Lineup</h1>
+                    </a>
+                </div>
+                <div class="col5">
+                    <img src="{{ url_for('static', filename='images/new2.png') }}">
+                    <a href="/steve-prefontaine">
+                    <h1>Nike's New Road Running Footwear Lineup Delivers Cushioning for Every Run</h1>
+                    </a>
+                </div>
+                <div class="col5">
+                    <img src="{{ url_for('static', filename='images/new3.png') }}">
+                    <a href="/steve-prefontaine">
+                    <h1>Introducing Elevated Essentials for Every Runner's Kit: Nike Swift and Stride</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- impact -->
+
+    <div class="impact">
+        <div class="container">
+            <div class="row">
+                <div class="col6">
+                    <h1>Through the Power of<br>Community, NIKE, Inc. <br>Advances Toward a <br> World for All</h1>     
+                    <a href="/report" class="btn">FY23 Nike, Inc. Impact Report  &#8594;</a>
+                </div>
+                <div class="col6">
+                    <img src="{{ url_for('static', filename='images/impact.png') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- initiatives -->
+    <div class="initiatives">
+        <div class="small-container">
+            <h2 class="title">Initiatives</h2>
+            <div class="row">
+                <div class="col5">
+                    <img src="{{ url_for('static', filename='images/init1.png') }}">
+                    <a href="/bill-bowerman">
+                    <h1>Getting Kids Active</h1>
+                    </a>
+                    <p>Nike invests in play and sport for all kids, because an active next 
+                    generation means a healthier and more equitable future.
+                    </p>
+                </div>
+                <div class="col5">
+                    <img src="{{ url_for('static', filename='images/init2.png') }}">
+                    <a href="/steve-prefontaine">
+                    <h1>Building and Investing in Our Teams</h1>
+                    </a>
+                    <p>We support the personal and professional wellbeing of NIKE, 
+                    <br>Inc. employees — from manufacturing to corporate — through 
+                    <br>a range of programs and partnerships.</p>
+                </div>
+                <div class="col5">
+                    <img src="{{ url_for('static', filename='images/init3.png') }}">
+                    <a href="/steve-prefontaine">
+                    <h1>Giving Back To Our Communities</h1>
+                    </a>
+                    <p>We're committed to building a future where everyone — regardless 
+                        of where they are from, the color of their skin, their abilities 
+                        or who they love — can thrive.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone</p>
+                    <div class="applogo">
+                        <a href="https://play.google.com"><img src="{{ url_for('static', filename='images/pstore.png') }}"></a>
+                        <a href="https://apps.apple.com"><img src="{{ url_for('static', filename='images/astore.png') }}"></a>
+                    </div>
+                </div>
+                <div class="footer-col2">
+                    <img src="{{ url_for('static', filename='images/logo3.png') }}">
+                    <p>Our purpose is to bring inspiration and innovation to every 
+                    athlete in the world.</p>
+                </div>
+                <div class="footer-col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Affiliate Program</li>
+
+                    </ul>
+                </div>
+                <div class="footer-col4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <a href="https://www.facebook.com/nike"><li>Facebook</li></a>
+                        <a href="https://www.twitter.com/nike"><li>Twitter</li></a>
+                        <a href="https://www.instagram.com/nike"><li>Instagram</li></a>                       
+                        <a href="https://www.Youtube.com/nike"><li>Youtube</li></a>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">2024 Nike, Inc. All Rights Reserved</p>
+        </div>
+    </div>
+
+    <!-- script for animating word -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const words = ["Everyone", "Runners", "Players","Coaches", "Women", "Athletes*"];
+            const wordElement = document.getElementById('changing-word');
+            const paragraphElement = document.querySelector('.col2 p');
+            let index = 0;
+    
+            function changeWord() {
+                wordElement.style.opacity = 0;
+                setTimeout(() => {
+                    wordElement.textContent = words[index];
+                    wordElement.style.opacity = 1;
+                    index = (index + 1) % words.length;
+                    if (index !== 0) {
+                        setTimeout(changeWord, 500);
+                    } else {
+                        paragraphElement.style.opacity = 1; 
+                    }
+                }, 500);
+            }
+    
+            changeWord();
+        });
+    </script>    
+</body>
+</html>    

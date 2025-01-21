@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Nike Men's Store</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+        #cart-container {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin: 0 auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        #cart-container h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Cart Item Styles */
+        .cart-list {
+            margin-bottom: 30px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .cart-item div {
+            flex-grow: 1;
+            margin-left: 15px;
+        }
+
+        .cart-item h3 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .cart-item p {
+            font-size: 16px;
+        }
+
+        .cart-item button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cart-item button:hover {
+            background-color: #d65a4a;
+        }
+
+        /* Cart Total Styles */
+        .cart-total {
+            font-size: 18px;
+            color: #333;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-total p {
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: #333;
+        }
+
+        .checkout-button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkout-button:hover {
+            background-color: #218838;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navbar .icons {
+                margin-top: 10px;
+            }
+
+            #cart-container {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cart-item img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .cart-item h3 {
+                font-size: 16px;
+            }
+
+            .cart-item p {
+                font-size: 14px;
+            }
+
+            .cart-total p {
+                font-size: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Nike Logo2.png') }}" width="125px" alt="Nike Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="/favorites" class="icon"><i class="fa fa-heart"></i></a>
+                <a href="/cart" class="icon"><i class="fa fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Content -->
+    <div id="cart-container">
+        <h2>Your Cart</h2>
+        <div class="cart-list">
+            <!-- Dynamically add cart products here -->
+        </div>
+        <div class="cart-total">
+            <p>Total: R<span id="total-price">0.00</span></p>
+            <button class="checkout-button">Checkout</button>
+            <!-- <button id="checkout-button">Checkout</button> -->
+        </div>
+    </div>
+
+     <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone</p>
+                    <div class="applogo">
+                        <a href="https://play.google.com"><img src="{{ url_for('static', filename='images/pstore.png') }}"></a>
+                        <a href="https://apps.apple.com"><img src="{{ url_for('static', filename='images/astore.png') }}"></a>
+                    </div>
+                </div>
+                <div class="footer-col2">
+                    <img src="{{ url_for('static', filename='images/logo3.png') }}">
+                    <p>Our purpose is to bring inspiration and innovation to every 
+                    athlete in the world.</p>
+                </div>
+                <div class="footer-col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Affiliate Program</li>
+
+                    </ul>
+                </div>
+                <div class="footer-col4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <a href="https://www.facebook.com/nike"><li>Facebook</li></a>
+                        <a href="https://www.twitter.com/nike"><li>Twitter</li></a>
+                        <a href="https://www.instagram.com/nike"><li>Instagram</li></a>                       
+                        <a href="https://www.Youtube.com/nike"><li>Youtube</li></a>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">2024 Nike, Inc. All Rights Reserved</p>
+        </div>
+    </div>
+    
+    <script>
+        function loadCart() {
+            fetch('/cart_data')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.querySelector('.cart-list');
+                    const totalPriceElem = document.getElementById('total-price');
+                    let total = 0;
+                    container.innerHTML = ''; // Clear previous content
+    
+                    data.cart.forEach(product => {
+                        container.innerHTML += `
+                            <div class="cart-item">
+                                <img src="${product.image}" alt="${product.name}" width="50">
+                                <div>
+                                    <h3>${product.name}</h3>
+                                    <p>R${product.price}</p>
+                                </div>
+                                <button onclick="removeFromCart(${product.id})">Remove</button>
+                            </div>
+                        `;
+                        total += product.price;
+                    });
+    
+                    totalPriceElem.textContent = total.toFixed(2); // Update total price
+                });
+        }
+    
+        function removeFromCart(productId) {
+            fetch(`/remove_from_cart/${productId}`, { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message) {
+                        loadCart(); // Reload the cart after removing item
+                    } else {
+                        alert(data.error);
+                    }
+                });
+        }
+    
+        loadCart(); // Load the cart data when the page loads
+    
+        // JavaScript for checkout
+        const stripe = Stripe('{{ stripe_public_key }}');
+    
+        const checkoutButton = document.querySelector('.checkout-button');
+        checkoutButton.addEventListener('click', function () {
+            console.log("Checkout button clicked"); // Debugging statement
+    
+            fetch('/checkout', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(function (response) {
+                console.log("Response from /checkout:", response); // Debugging statement
+                return response.json();
+            })
+            .then(function (session) {
+                console.log("Session ID received:", session.id); // Debugging statement
+                return stripe.redirectToCheckout({ sessionId: session.id });
+            })
+            .then(function (result) {
+                if (result.error) {
+                    console.error("Stripe redirect error:", result.error); // Debugging statement
+                    alert(result.error.message);
+                }
+            })
+            .catch(function (error) {
+                console.error("Error during checkout:", error); // Debugging statement
+            });
+        });
+    </script>
+
+</body>
+</html>

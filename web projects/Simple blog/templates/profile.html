@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | {{ user.username }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="container">
+        <div class="profile-header">
+            <h1>{{ user.username }}'s Profile</h1>
+        </div>
+
+        <!-- Friend Requests Section -->
+        <div class="friend-requests">
+            <h2>Friend Requests</h2>
+            {% if friend_requests %}
+                {% for request in friend_requests %}
+                    <div class="friend-request">
+                        <p>{{ request.user.username }} wants to be your friend.</p>
+                        <a href="{{ url_for('accept_friend_request', friend_request_id=request.id) }}" class="btn">Accept</a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No new friend requests.</p>
+            {% endif %}
+        </div>
+
+        <!-- Send Message Section -->
+        <div class="send-message">
+            <h2>Send Message</h2>
+            <form action="{{ url_for('send_message', receiver_id=user.id) }}" method="POST">
+                <textarea name="content" placeholder="Write a message..." class="textarea"></textarea>
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Your Blog | <a href="#">Privacy Policy</a></p>
+    </div>
+</body>
+</html>
