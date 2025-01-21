@@ -63,5 +63,5 @@ Contributions are welcome! Please open an issue or submit a pull request to disc
 
 ## Author
 
-- [Sboniso Mnncwango](https://github.com/Mehlorh)
+- [Sboniso Mncwango](https://github.com/Mehlorh)
 
